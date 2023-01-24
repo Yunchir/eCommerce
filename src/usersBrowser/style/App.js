@@ -1,4 +1,6 @@
 import React from "react";
+// import User from "./usersBrowser/components/User";
+// import Dashboard from "./mainDashboard/Dashboard";
 import Header from "./usersBrowser/components/Header";
 import Main from "./usersBrowser/components/Main";
 import Footer from "./usersBrowser/components/Footer";
@@ -48,6 +50,8 @@ function App() {
         <Route path="/Page/:id" element={<ProductPage />} />
         <Route path="/" element={<Main />} />
         <Route path="/search/:product" element={<Search />} />
+        {/* <Route path="/search/:product" element={<User />} /> */}
+        {/* <Route path="/admin" element={<Dashboard />} /> */}
       </Routes>
       <Footer />
     </div>
