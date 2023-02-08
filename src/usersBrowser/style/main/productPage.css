@@ -1,0 +1,49 @@
+.proAdd{
+    display: flex;
+}
+
+.proAdd-img{
+    border: 1px solid rgb(181, 162, 162);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.inStock{
+    color: #30BD57;
+}
+
+.hurryUp{
+    color: #4A4A4A;
+}
+
+.proColor{
+    display: flex;
+    gap: 5px;
+}
+
+.proColors{
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.proColorNeon{
+    height: 10px;
+    width: 10px;
+    background-color: #30BD57;
+    border-radius: 50%;
+    top: 20px;
+    border: 1px solid #4A4A4A;
+    /* padding: 5px; */
+}
+
+.procolorBlue{
+    height: 10px;
+    width: 10px;
+    background-color: #4A4A4A;
+    border-radius: 50%;
+    top: 20px;
+    border: 1px solid #333;
+    /* padding: 5px; */
+}
