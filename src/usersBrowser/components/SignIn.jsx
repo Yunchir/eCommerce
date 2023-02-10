@@ -53,7 +53,7 @@ export default function SingIn(prop) {
               <span className="">Эсвэл</span>
               <div className="border"></div>
             </div>
-            <button className="register">Бүртгүүлэх</button>
+            <button className="register" >Бүртгүүлэх</button>
           </div>
         </form>
       </div>

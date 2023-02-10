@@ -1,16 +1,18 @@
 import "../../../style/main/speical/speicalProduct.css";
 import cart from "../../../img/shopping-cart.svg";
-export default function SpeicalProduct(prop) {
-  const { data } = prop;
+import { useContext } from "react";
+import { DataContext } from "../../../../App";
+export default function SpeicalProduct() {
+  const { data } = useContext(DataContext);
   return (
     <div className="speicalProduct">
       <div className="SProductImg">
-        <img src={data.image} alt="" />
+        <img src={data && data[1].image} alt="" />
       </div>
       <div className="SProductContent">
-        <h2>{data.name}</h2>
-        <p>{data.description}</p>
-        <p>${data.price}</p>
+        <h2>{data && data[1].name}</h2>
+        <p>{data && data[1].description}</p>
+        <p>${data && data[1].price}</p>
         <button>
           Add to cart <img src={cart} alt="" />
         </button>

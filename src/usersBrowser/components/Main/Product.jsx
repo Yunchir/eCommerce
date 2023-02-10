@@ -1,4 +1,4 @@
-import "../../style/main/Product.css";
+import "../../style/main/product.css";
 import cart from "../../img/shopping-cart.svg";
 import { useNavigate } from "react-router-dom";
 
@@ -7,10 +7,9 @@ export default function Product(prop) {
   function Page() {
     navigate(`/page/${prop.id}`);
   }
-  console.log(prop);
   return (
     <div className="product" onClick={Page}>
-      <img src={prop.img} alt="" />
+      <img src={prop.img} alt="#" />
       <div className="productContent">
         <h5 className="productTitle">{prop.name}</h5>
         <p className="productName">{prop.category}</p>

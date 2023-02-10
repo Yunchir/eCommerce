@@ -21,6 +21,7 @@ export default function Search() {
           id={e.id}
         />
       ))}
+      
     </div>
   );
 }

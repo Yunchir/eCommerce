@@ -1,9 +1,10 @@
 import "../../style/main/Navbar.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Product from "./Product";
-import { data } from "../../../util/data";
+import { DataContext } from "../../../App";
 
 export default function Navbar() {
+  const { data } = useContext(DataContext);
   const [Input, setInput] = useState(data);
   function filter(e) {
     if (e.target.innerText === "All") {
@@ -41,16 +42,17 @@ export default function Navbar() {
         </li>
       </ul>
 
-      {Input.map((pro) => (
-        <Product
-          id={pro.id}
-          name={pro.name}
-          title={pro.description}
-          category={pro.category}
-          price={pro.price}
-          img={pro.image}
-        />
-      ))}
+      {Input &&
+        Input.map((pro) => (
+          <Product
+            id={pro.id}
+            name={pro.name}
+            title={pro.description}
+            category={pro.category}
+            price={pro.price}
+            img={pro.image}
+          />
+        ))}
     </div>
   );
 }
