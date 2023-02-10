@@ -28,12 +28,24 @@ export default function ProductCard() {
                 <div className="procolorBlue"></div>
               </div>
             </span>
-            <div>
+            <div className="proSize">
               <span>Size:</span>
               <button>23</button>
               <button>34</button>
               <button>13</button>
               <button>24</button>
+            </div>
+            <div className="proQuantity">
+              <span>Quantity:</span>
+              <div className="proQuantityBtn">
+                <button>-</button>
+                <button>1</button>
+                <button>+</button>
+              </div>
+            </div>
+            <div>
+              <button>Add to catd</button>
+              <button>Buy it now</button>
             </div>
             <p>{dat[0].description}</p>
             {/* <p>{dat[0].spec}</p> */}
