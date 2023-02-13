@@ -1,12 +1,12 @@
 import "../style/signIn.css";
 import logo1 from "../img/logo1.svg";
 import icon from "../img/Icon.svg";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { DataContext } from "../../App";
 
 export default function SingIn(prop) {
-  const { sign } = prop;
-  const { loginHandler } = prop;
+  const { loginHandler, sign } = useContext(DataContext);
   const navigate = useNavigate();
   const [userName1, setUserName] = useState("");
   const [password1, setPassword] = useState("");
@@ -53,7 +53,7 @@ export default function SingIn(prop) {
               <span className="">Эсвэл</span>
               <div className="border"></div>
             </div>
-            <button className="register" >Бүртгүүлэх</button>
+            <button className="register">Бүртгүүлэх</button>
           </div>
         </form>
       </div>

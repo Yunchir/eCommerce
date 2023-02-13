@@ -47,7 +47,7 @@ export default function ProductCard() {
                 </div>
               </div>
               <div className="proAddBuy">
-                <button className="proAddCatd">Ad to catd</button>
+                <button className="proAddCatd">Add to catd</button>
 
                 <button className="proBuy">Buy it now</button>
               </div>
