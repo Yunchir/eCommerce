@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../../App";
-// import { data } from "../../../util/data";
 import "../../style/main/productPage.css";
 
 export default function ProductCard() {
@@ -48,7 +47,8 @@ export default function ProductCard() {
                 </div>
               </div>
               <div className="proAddBuy">
-                <button className="proAddCatd">Add to catd</button>
+                <button className="proAddCatd">Ad to catd</button>
+
                 <button className="proBuy">Buy it now</button>
               </div>
               <p>{data[0].description}</p>

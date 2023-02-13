@@ -1,9 +1,9 @@
 import "../style/Header.css";
 import logo from "../img/logo.svg";
 import user from "../img/user.svg";
-import cart from "../img/shopping-cart.svg";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import OrderOffcan from "./Main/OrderOffcan";
 
 export default function Header(prop) {
   const { setSign } = prop;
@@ -46,10 +46,10 @@ export default function Header(prop) {
             />
           </div>
 
-          <button className="cart">
-            <img src={cart} alt="" />
+          <div className="cart">
+            <OrderOffcan />
             <div className="number">0</div>
-          </button>
+          </div>
         </div>
       </div>
     </div>

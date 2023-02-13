@@ -6,6 +6,7 @@ import { DataContext } from "../../../App";
 export default function Navbar() {
   const { data } = useContext(DataContext);
   const [Input, setInput] = useState(data);
+
   function filter(e) {
     if (e.target.innerText === "All") {
       setInput(data);
