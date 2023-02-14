@@ -1,8 +1,27 @@
 .SpeicalAbout {
   width: 100%;
-  height: 48%;
+  height: 94%;
   border: 1px solid black;
   border-radius: 20px;
   box-sizing: border-box;
   padding: 40px;
+  display: flex;
+}
+
+.date{
+  border: 1px solid #97F65C;
+  border-radius: 50px;
+  padding: 10px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.SProductContent p{
+  color: #002A41;
+}
+
+.SProductContent .bySpacing{
+  color: #97F65C;
+  margin-bottom: -30px;
 }

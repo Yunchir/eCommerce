@@ -7,7 +7,6 @@ export default function Ads() {
         <h2>Sale up to 50% off</h2>
         <p>12inch hd display</p>
         <button className="outlineBtn">shop now</button>
-        <button className="outlineBtn">shop now</button>
       </div>
     </div>
   );
