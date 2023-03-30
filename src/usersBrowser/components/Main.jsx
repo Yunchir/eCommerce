@@ -1,7 +1,7 @@
 import { React, useContext } from "react";
 import Slide from "./Main/Slide";
 import "../style/Main.css";
-import Product from "./Main/Product";
+// import Product from "./Main/Product";
 import Navbar from "./Main/Navbar";
 import Ads from "./Main/Ads";
 import Speical from "./Main/Speical";
