@@ -20,7 +20,7 @@ function App() {
   const Navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:2020/products").then((res) => {
+    axios.get("http://localhost:6060/products").then((res) => {
       setData(res.data);
     });
   }, []);

@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useParams } from "react-router-dom";
 import { DataContext } from "../../../App";
 import "../../style/main/productPage.css";
@@ -7,6 +7,54 @@ export default function ProductCard() {
   const { data } = useContext(DataContext);
   const test = useParams();
   let dat = data && data.filter((hoho) => hoho.id === test.id);
+  const [count, setCount] = useState(0);
+  console.log("stock", dat && dat[0].stock);
+
+  // let oneProduct = data && data.filter((prop) => prop.id === test.id);
+  // function add() {
+  //   if (count < oneProduct[0].stock) {
+  //     let proDet =
+  //       data &&
+  //       data.filter((prop) => {
+  //         prop.id === test.id;
+  //       });
+  //   }
+  // }
+
+  function plus() {
+    if (dat[0].stock > count) {
+      setCount(count + 1);
+    }
+  }
+
+  function minus() {
+    if (count > 0) {
+      setCount(count - 1);
+    }
+  }
+
+  function addBasket() {
+    let baskets = [];
+    setCount(0);
+
+    if (localStorage.getItem("baskets")) {
+      baskets = JSON.parse(localStorage.getItem("baskets"));
+      const findData = baskets.find((product) => product.id === dat[0].id);
+      if (findData) {
+        baskets[baskets.indexOf(findData)].stock =
+          baskets[baskets.indexOf(findData)].stock + count;
+        baskets = [...baskets];
+      } else {
+        baskets = [...baskets, { id: dat[0].id, stock: count }];
+      }
+    } else {
+      baskets = [...baskets, { id: dat[0].id, stock: count }];
+    }
+    console.log("check", baskets);
+    localStorage.setItem("baskets", JSON.stringify(baskets));
+  }
+  console.log("count", count);
+
   return (
     data && (
       <div>
@@ -22,7 +70,7 @@ export default function ProductCard() {
                 {dat[0].category}: <span className="inStock">In stock</span>
               </p>
               <span className="hurryUp">
-                Hurry up! only 34 product left in stock
+                Hurry up! only {dat && dat[0].stock} product left in stock
               </span>
               <span className="proColor">
                 <p>Color:</p>
@@ -31,23 +79,26 @@ export default function ProductCard() {
                   <div className="procolorBlue"></div>
                 </div>
               </span>
-              <div className="proSize">
-                <span>Size:</span>
-                <button>23</button>
-                <button>34</button>
-                <button>13</button>
-                <button>24</button>
-              </div>
               <div className="proQuantity">
                 <span>Quantity:</span>
                 <div className="proQuantityBtn">
-                  <button className="proMinusBtn">-</button>
-                  <button>1</button>
-                  <button className="proPlusBtn">+</button>
+                  <div>
+                    <button className="count" onClick={minus}>
+                      -
+                    </button>
+                  </div>
+                  <button className="numCount">{count}</button>
+                  <div>
+                    <button className="count" onClick={plus}>
+                      +
+                    </button>
+                  </div>
                 </div>
               </div>
               <div className="proAddBuy">
-                <button className="proAddCatd">Add to catd</button>
+                <button className="proAddCatd" onClick={addBasket}>
+                  Add to card
+                </button>
 
                 <button className="proBuy">Buy it now</button>
               </div>

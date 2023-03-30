@@ -25,14 +25,15 @@
 
 .proColor {
   display: flex;
+  margin-top: 20px;
   gap: 5px;
 }
 
 .proColors {
   display: flex;
   gap: 5px;
-  margin-top: 20px;
-}
+  margin-top: 10px;
+} 
 
 .proColorNeon {
   height: 10px;
@@ -68,7 +69,18 @@
 }
 
 .proQuantityBtn {
-  gap: 10px;
+  /* gap: 10px; */
+  display: flex;
+  border: 1px solid #f4f4f4;
+}
+
+.numCount {
+  width: 50px;
+  border: 1px solid #333;
+}
+
+.count{
+  border: 1px solid #333;
 }
 
 .proAddBuy {

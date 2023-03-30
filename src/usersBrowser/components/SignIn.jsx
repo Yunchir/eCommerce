@@ -6,7 +6,8 @@ import { useNavigate } from "react-router-dom";
 import { DataContext } from "../../App";
 
 export default function SingIn(prop) {
-  const { loginHandler, sign } = useContext(DataContext);
+  const { loginHandler } = useContext(DataContext);
+  const { sign } = prop;
   const navigate = useNavigate();
   const [userName1, setUserName] = useState("");
   const [password1, setPassword] = useState("");
@@ -22,7 +23,7 @@ export default function SingIn(prop) {
         <div className="logo">
           <img src={logo1} alt="" />
           <button onClick={() => sign(false)}>
-            <img src={icon} alt="" onClick={() => sign} />
+            <img src={icon} alt="" onClick={() => Sign} />
           </button>
         </div>
         <form>

@@ -1,0 +1,41 @@
+.boxHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxDelete{
+    border-bottom: 1px solid #003585;
+    color: #003585;
+}
+
+.productImg{
+    width: 90px;
+}
+
+.order{
+    height: 100px;
+    width: 380px;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+
+.proOrder{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 90%;
+    background-color: #f4f4f4;
+    border: none;
+    margin-top: 930px;
+    height: 40px;
+}
+
+.productOffcan{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}

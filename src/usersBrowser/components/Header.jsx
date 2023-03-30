@@ -2,13 +2,15 @@ import "../style/Header.css";
 import logo from "../img/logo.svg";
 import user from "../img/user.svg";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import OrderOffcan from "./Main/OrderOffcan";
+import { DataContext } from "../../App";
 
 export default function Header(prop) {
-  const { setSign } = prop;
+  const { setSignIn } = useContext(DataContext);
   const navigate = useNavigate();
   const [val, setVal] = useState("");
+  console.log("Sign: ", setSignIn);
   function search() {
     console.log(val);
     if (val === "") {
@@ -42,7 +44,7 @@ export default function Header(prop) {
               type="button"
               value={"Sign in"}
               className="signIn"
-              onClick={() => setSign(true)}
+              onClick={() => setSignIn(true)}
             />
           </div>
 
